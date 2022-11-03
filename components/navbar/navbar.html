@@ -1,0 +1,29 @@
+<div class="navbar bg-base-200">
+    <div class="navbar-start">
+        <img src="https://img.icons8.com/clouds/100/null/google-earth.png"
+             alt="earthImage"
+             height="50 rem"
+             width="50 rem"/>
+        <a class="btn btn-ghost normal-case text-xl">Noter</a>
+    </div>
+    <form action="" method="get">
+        <div class="navbar-center flex flex-row">
+            <div class="form-control flex flex-row invisible md:visible">
+                <input name="search_notes"
+                       type="text"
+                       placeholder="Search From All Notes"
+                       class="input input-bordered"/>
+                <button type="submit" class="btn">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div class="navbar-end">
+        <ul class="menu menu-horizontal p-0">
+            <li>
+                <a href="{% url 'home' %}">All Notes</a>
+            </li>
+        </ul>
+    </div>
+</div>

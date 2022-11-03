@@ -1,0 +1,28 @@
+{% load static tailwind_tags %}
+{% load component_tags %}
+<!DOCTYPE html>
+<html lang="en" data-theme="forest">
+    {% load component_tags %}
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="icon"
+              href="https://img.icons8.com/clouds/100/null/google-earth.png"/>
+        <title>Noter</title>
+    </head>
+    <body>
+        {% component "navbar" %}
+        {% tailwind_css %}
+        {% block content %}
+            Body
+        {% endblock content %}
+        <footer class="footer footer-center p-4 bg-base-300 text-base-content absolute bottom-0">
+            <div>
+                <p>A Website where random people share their thoughts and random people delete it. Created by Shubham</p>
+            </div>
+        </footer>
+    </body>
+</html>

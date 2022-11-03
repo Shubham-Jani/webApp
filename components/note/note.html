@@ -1,0 +1,26 @@
+<div class="card w-auto bg-bas-300 border-2 border-gray-800 shadow-xl m-2">
+    <div class="card-body">
+        <h2 class="card-title">{{ note.title }}</h2>
+        <p>{{ note.description|truncatechars:50 }}</p>
+        <div class="card-actions justify-end">
+            <label for="my-modal-5" class="btn">
+                <span class="material-symbols-outlined">expand_content</span>
+            </label>
+            <a href="{% url 'delete_note' note.id %}">
+                <button class="btn">
+                    <span class="material-symbols-outlined">delete</span>
+                </button>
+            </a>
+            <!-- The button to open modal -->
+            <!-- Put this part before </body> tag -->
+            <input type="checkbox" id="my-modal-5" class="modal-toggle" />
+            <div class="modal ">
+                <div class="modal-box relative w-3/4 max-w-3xl ">
+                    <label for="my-modal-5" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                    <h3 class="text-lg font-bold">{{ note.title }}</h3>
+                    <p class="py-4">{{ note.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
