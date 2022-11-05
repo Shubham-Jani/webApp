@@ -3236,6 +3236,10 @@ select {
   stroke: currentColor;
 }
 
+.stroke-info {
+  stroke: hsl(var(--in));
+}
+
 .p-0 {
   padding: 0px;
 }
@@ -3265,6 +3269,14 @@ select {
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .normal-case {

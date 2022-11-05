@@ -15,9 +15,12 @@ def notes_view(request):
     if request.method == 'POST':
         title = request.POST.get('note_title')
         description = request.POST.get('note_description')
-        print(description)
+        if "shubham" in title.lower() or "shubham" in description.lower():
+            messages.warning(request, "Goli beta masti nahi ! 🙂")
+            return redirect("home")
         new_note = Note(title=title, description=description)
         new_note.save()
+        return redirect("home")
     if request.method == 'GET' and request.GET.get('search_notes') != None:
         search_field = request.GET.get('search_notes')
         notes = Note.objects.filter(

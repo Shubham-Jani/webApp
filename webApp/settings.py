@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'theme',
     'notes',
     'django_components',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
